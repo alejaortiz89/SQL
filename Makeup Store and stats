@@ -1,0 +1,47 @@
+/** makeup store:
+Blush (2)
+Eyeshadow (3)
+Lipstick (1)
+Foundation (6)
+Eyeliner (4)
+Mascara (3)
+Chapstick (3)
+Makeup wipes (6)
+Lipgloss (9)
+Eyelashes (4)
+Brushes (7)
+Glitter (3)
+Nailpolish (5)
+Concealer (3)
+Highlighter (4)
+**/
+
+CREATE TABLE makeupstore (id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, rating INTEGER
+);
+
+INSERT INTO makeupstore VALUES (1,"Blush", 2,10,3);
+INSERT INTO makeupstore VALUES (2, "Eyeshadow", 3,10,4);
+INSERT INTO makeupstore VALUES (3, "Lipstick", 1,15,2);
+INSERT INTO makeupstore VALUES (4, "Foundation", 6,12,5);
+INSERT INTO makeupstore VALUES (5, "Eyeliner", 4,7,6);
+INSERT INTO makeupstore VALUES (6, "Mascara", 3,13,7);
+INSERT INTO makeupstore VALUES (7, "Chapstick", 3,8,1);
+INSERT INTO makeupstore VALUES (8, "Makeup wipes", 6,9,4);
+INSERT INTO makeupstore VALUES (9, "Lipgloss", 9,2,6);
+INSERT INTO makeupstore VALUES (10, "Eyelashes", 4,12,2);
+INSERT INTO makeupstore VALUES (11, "Brushes", 7,17,8);
+INSERT INTO makeupstore VALUES (12, "Glitter", 3,2,2);
+INSERT INTO makeupstore VALUES (13, "Nailpolish", 5,12,7);
+INSERT INTO makeupstore VALUES (14, "Concealer", 3,2,6);
+INSERT INTO makeupstore VALUES (15, "Highlighter", 4,12,2);
+SELECT * FROM makeupstore;
+
+--display the database item names.
+SELECT * FROM makeupstore
+ORDER BY rating
+
+--what are the most 5 popular items? 
+SELECT item, price, rating
+FROM store
+order by rating
+limit 5; 
